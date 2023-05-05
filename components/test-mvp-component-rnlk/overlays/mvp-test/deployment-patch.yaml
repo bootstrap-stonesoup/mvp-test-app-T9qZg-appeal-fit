@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: test-mvp-component-rnlk
+  namespace: mvp-demo-dev-namespace-jrjm-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/test-images@sha256:39e2044c986ee2baff7f85048d8bf3378309b7cfad92da3101f364f43cfb9db7
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
